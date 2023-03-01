@@ -33,8 +33,7 @@
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
         <script src="js/leaflet.markercluster.js"></script>
-        <script src="data/province_thailand_1.js"></script>
-        <script src="data/CSV_Tourist3_2.js"></script>
+        <script src="data/CSV_Tourist3_1.js"></script>
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
@@ -58,66 +57,7 @@
         });
         layer_OSMStandard_0;
         map.addLayer(layer_OSMStandard_0);
-        function pop_province_thailand_1(feature, layer) {
-            var popupContent = '<table>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ID'] !== null ? autolinker.link(feature.properties['ID'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PROV_CODE'] !== null ? autolinker.link(feature.properties['PROV_CODE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PROV_TH'] !== null ? autolinker.link(feature.properties['PROV_TH'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['PROV_EN'] !== null ? autolinker.link(feature.properties['PROV_EN'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['REG_NESDB'] !== null ? autolinker.link(feature.properties['REG_NESDB'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['REG_ROYIN'] !== null ? autolinker.link(feature.properties['REG_ROYIN'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['ADMIN_TYPE'] !== null ? autolinker.link(feature.properties['ADMIN_TYPE'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2">' + (feature.properties['rainfall'] !== null ? autolinker.link(feature.properties['rainfall'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                </table>';
-            layer.bindPopup(popupContent, {maxHeight: 400});
-        }
-
-        function style_province_thailand_1_0() {
-            return {
-                pane: 'pane_province_thailand_1',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(60,149,213,1.0)',
-                interactive: true,
-            }
-        }
-        map.createPane('pane_province_thailand_1');
-        map.getPane('pane_province_thailand_1').style.zIndex = 401;
-        map.getPane('pane_province_thailand_1').style['mix-blend-mode'] = 'normal';
-        var layer_province_thailand_1 = new L.geoJson(json_province_thailand_1, {
-            attribution: '',
-            interactive: true,
-            dataVar: 'json_province_thailand_1',
-            layerName: 'layer_province_thailand_1',
-            pane: 'pane_province_thailand_1',
-            onEachFeature: pop_province_thailand_1,
-            style: style_province_thailand_1_0,
-        });
-        bounds_group.addLayer(layer_province_thailand_1);
-        map.addLayer(layer_province_thailand_1);
-        function pop_CSV_Tourist3_2(feature, layer) {
+        function pop_CSV_Tourist3_1(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
                         <td colspan="2">' + (feature.properties['ID'] !== null ? autolinker.link(feature.properties['ID'].toLocaleString()) : '') + '</td>\
@@ -162,10 +102,10 @@
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_CSV_Tourist3_2_0(feature) {
+        function style_CSV_Tourist3_1_0(feature) {
             if (feature.properties['จำนวนนักท่องเที่ยว'] >= 0.000000 && feature.properties['จำนวนนักท่องเที่ยว'] <= 28000.000000 ) {
                 return {
-                pane: 'pane_CSV_Tourist3_2',
+                pane: 'pane_CSV_Tourist3_1',
                 radius: 2.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -181,7 +121,7 @@
             }
             if (feature.properties['จำนวนนักท่องเที่ยว'] >= 28000.000000 && feature.properties['จำนวนนักท่องเที่ยว'] <= 178800.000000 ) {
                 return {
-                pane: 'pane_CSV_Tourist3_2',
+                pane: 'pane_CSV_Tourist3_1',
                 radius: 5.5,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -197,7 +137,7 @@
             }
             if (feature.properties['จำนวนนักท่องเที่ยว'] >= 178800.000000 && feature.properties['จำนวนนักท่องเที่ยว'] <= 580000.000000 ) {
                 return {
-                pane: 'pane_CSV_Tourist3_2',
+                pane: 'pane_CSV_Tourist3_1',
                 radius: 9.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -213,7 +153,7 @@
             }
             if (feature.properties['จำนวนนักท่องเที่ยว'] >= 580000.000000 && feature.properties['จำนวนนักท่องเที่ยว'] <= 1095000.000000 ) {
                 return {
-                pane: 'pane_CSV_Tourist3_2',
+                pane: 'pane_CSV_Tourist3_1',
                 radius: 12.5,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -229,7 +169,7 @@
             }
             if (feature.properties['จำนวนนักท่องเที่ยว'] >= 1095000.000000 && feature.properties['จำนวนนักท่องเที่ยว'] <= 20411682.000000 ) {
                 return {
-                pane: 'pane_CSV_Tourist3_2',
+                pane: 'pane_CSV_Tourist3_1',
                 radius: 16.0,
                 opacity: 1,
                 color: 'rgba(35,35,35,1.0)',
@@ -244,30 +184,30 @@
             }
             }
         }
-        map.createPane('pane_CSV_Tourist3_2');
-        map.getPane('pane_CSV_Tourist3_2').style.zIndex = 402;
-        map.getPane('pane_CSV_Tourist3_2').style['mix-blend-mode'] = 'normal';
-        var layer_CSV_Tourist3_2 = new L.geoJson(json_CSV_Tourist3_2, {
+        map.createPane('pane_CSV_Tourist3_1');
+        map.getPane('pane_CSV_Tourist3_1').style.zIndex = 401;
+        map.getPane('pane_CSV_Tourist3_1').style['mix-blend-mode'] = 'normal';
+        var layer_CSV_Tourist3_1 = new L.geoJson(json_CSV_Tourist3_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_CSV_Tourist3_2',
-            layerName: 'layer_CSV_Tourist3_2',
-            pane: 'pane_CSV_Tourist3_2',
-            onEachFeature: pop_CSV_Tourist3_2,
+            dataVar: 'json_CSV_Tourist3_1',
+            layerName: 'layer_CSV_Tourist3_1',
+            pane: 'pane_CSV_Tourist3_1',
+            onEachFeature: pop_CSV_Tourist3_1,
             pointToLayer: function (feature, latlng) {
                 var context = {
                     feature: feature,
                     variables: {}
                 };
-                return L.circleMarker(latlng, style_CSV_Tourist3_2_0(feature));
+                return L.circleMarker(latlng, style_CSV_Tourist3_1_0(feature));
             },
         });
-        var cluster_CSV_Tourist3_2 = new L.MarkerClusterGroup({showCoverageOnHover: false,
+        var cluster_CSV_Tourist3_1 = new L.MarkerClusterGroup({showCoverageOnHover: false,
             spiderfyDistanceMultiplier: 2});
-        cluster_CSV_Tourist3_2.addLayer(layer_CSV_Tourist3_2);
+        cluster_CSV_Tourist3_1.addLayer(layer_CSV_Tourist3_1);
 
-        bounds_group.addLayer(layer_CSV_Tourist3_2);
-        cluster_CSV_Tourist3_2.addTo(map);
+        bounds_group.addLayer(layer_CSV_Tourist3_1);
+        cluster_CSV_Tourist3_1.addTo(map);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
@@ -279,7 +219,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'CSV_Tourist3<br /><table><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_2_0280000.png" /></td><td>0 - 28000</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_2_280001788001.png" /></td><td>28000 - 178800</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_2_1788005800002.png" /></td><td>178800 - 580000</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_2_58000010950003.png" /></td><td>580000 - 1095000</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_2_1095000204116824.png" /></td><td>1095000 - 20411682</td></tr></table>': cluster_CSV_Tourist3_2,'<img src="legend/province_thailand_1.png" /> province_thailand': layer_province_thailand_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'CSV_Tourist3<br /><table><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_1_0280000.png" /></td><td>0 - 28000</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_1_280001788001.png" /></td><td>28000 - 178800</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_1_1788005800002.png" /></td><td>178800 - 580000</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_1_58000010950003.png" /></td><td>580000 - 1095000</td></tr><tr><td style="text-align: center;"><img src="legend/CSV_Tourist3_1_1095000204116824.png" /></td><td>1095000 - 20411682</td></tr></table>': cluster_CSV_Tourist3_1,"OSM Standard": layer_OSMStandard_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
